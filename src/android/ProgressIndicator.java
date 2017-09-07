@@ -69,6 +69,7 @@ public class ProgressIndicator extends CordovaPlugin {
     public void show(String text) {
         progressIndicator = new ProgressDialog(cordova.getActivity());
 		progressIndicator.setTitle(text);
+		progressIndicator.setCancelable(false);
 		progressIndicator.show();
     }
 
@@ -82,6 +83,7 @@ public class ProgressIndicator extends CordovaPlugin {
 		if(withTitle)
 			progressIndicator.setTitle(title);
 		progressIndicator.setMessage(detail);
+		progressIndicator.setCancelable(false);
 		progressIndicator.show();
     }
 
